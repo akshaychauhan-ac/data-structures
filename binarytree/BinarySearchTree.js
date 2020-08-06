@@ -81,13 +81,11 @@ class BinarySearchTree {
 		}
 	}
 
-	getRootNode() 
-	{ 
+	getRootNode () { 
 	    return this.root; 
 	}
 
-	inorder (node) 
-	{ 
+	inorder (node) { 
 	    if (node !== null) 
 	    { 
 	        this.inorder(node.left); 
@@ -96,8 +94,7 @@ class BinarySearchTree {
 	    } 
 	}
 
-    preorder (node) 
-	{ 
+	preorder (node) { 
 	    if (node !== null) 
 	    { 
 	        console.log(node.data); 
@@ -106,8 +103,7 @@ class BinarySearchTree {
 	    } 
 	}          
     
-    postorder(node) 
-	{ 
+	postorder (node) { 
 	    if (node !== null) 
 	    { 
 	        this.postorder(node.left); 
@@ -116,8 +112,7 @@ class BinarySearchTree {
 	    } 
 	}
 
-	search(node, data) 
-	{
+	search (node, data) {
 	    if (node === null)
 	        return null; 
 	    else if (data < node.data)
