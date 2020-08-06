@@ -1,5 +1,4 @@
-# data-structures
-Data Structures
+# Data Structures
 
 
 1) Binary Tree -
