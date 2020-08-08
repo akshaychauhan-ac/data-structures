@@ -44,6 +44,9 @@ class PriorityQueue {
       let currentChildNode = this.heap[currentChildIdx];
       this.heap[currentChildIdx] = currentNode;
       this.heap[currentIdx] = currentChildNode;
+      currentIdx = currentChildIdx;
+      [left, right] = [2*currentIdx, 2*currentIdx + 1];
+      currentChildIdx = this.heap[right] && this.heap[right].priority >= this.heap[left].priority ? right : left;
     }
     return toRemove;
   }
