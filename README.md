@@ -29,3 +29,19 @@
     var root = BST.getRootNode();
     BST.inorder(root);
 
+2) Binary Heaps -
+
+    var PQ = new PriorityQueue();
+    
+    PQ.insert(1, 10);
+    PQ.insert(2, 20);
+    PQ.insert(3, 30);
+    PQ.insert(4, 40);
+    PQ.insert(5, 50);
+    PQ.insert(6, 60);
+    PQ.insert(7, 70);
+    PQ.insert(8, 80);
+    
+    PQ.remove();
+    
+    
