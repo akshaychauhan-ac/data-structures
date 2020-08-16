@@ -1,7 +1,10 @@
 # Data Structures
 
+	1) Binary Tree
+	2) Heaps
+	3) Graphs
 
-# 1) Binary Tree -
+# Binary Tree -
 
     var BST = new BinarySearchTree(); 
 
@@ -29,7 +32,7 @@
     var root = BST.getRootNode();
     BST.inorder(root);
 
-# 2) Heaps -
+# Heaps -
     Priority queues
 		insert
 			compare priority & inesert at the next pointer
@@ -56,7 +59,7 @@
     
     PQ.remove();
     
-# 3) Graphs -
+# Graphs -
     Directed/Undirected
 	Adjacency Matrix/List (Hash-set)
 	DFS
