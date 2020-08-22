@@ -39,18 +39,18 @@ class LinkedList {
 	}
 
 	getAt (index) {
-        let counter = 0;
-        let node = this.head;
+		let counter = 0;
+		let node = this.head;
 
-        while (node) {
-            if (counter === index) {
-               return node;
-            }
-            counter++;
-            node = node.next;
-        }
-        return null;
-    }
+		while (node) {
+		    if (counter === index) {
+		       return node;
+		    }
+		    counter++;
+		    node = node.next;
+		}
+		return null;
+	}
 
 	insert (index, value) {
 		let counter = 0;
