@@ -1,8 +1,9 @@
 # Data Structures
 
-	1) Binary Tree
-	2) Heaps
-	3) Graphs
+	1) Arrays
+	2) Binary Tree
+	3) Heaps
+	4) Graphs
 
 # Binary Tree -
 
