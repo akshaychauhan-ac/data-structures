@@ -4,6 +4,7 @@
 	2) Binary Tree
 	3) Heaps
 	4) Graphs
+	5) Linked Lists
 	
 # Arrays -
 	1) push
@@ -98,5 +99,6 @@
 
     const visit = console.log;
     
-    
+# Linked Lists -
+	
 
