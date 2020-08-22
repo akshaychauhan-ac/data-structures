@@ -4,6 +4,9 @@
 	2) Binary Tree
 	3) Heaps
 	4) Graphs
+	
+# Arrays -
+	a
 
 # Binary Tree -
 
