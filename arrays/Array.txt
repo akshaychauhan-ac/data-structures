@@ -1,35 +1,34 @@
-# 1) join, toString
-push, unshift
-pop, shift
-splice - 
-  remove - Array.splice( index, remove_count, item_list )
-  add - Pokemon.splice(2,0,'Evolve')
-life.slice(1,3)
-includes()
-filter -
-  let animals = [
-    {name: 'Tibbers', type: 'cat', isNeutered: true, age: 2},
-    {name: 'Fluffball', type: 'rabbit', isNeutered: false, age: 1},
-    {name: 'Strawhat', type: 'cat', isNeutered: true, age: 5}
-  ];
+1) join, toString
+2) push, unshift
+3) pop, shift
+4) splice - 
+      remove - Array.splice( index, remove_count, item_list )
+      add - Pokemon.splice(2,0,'Evolve')
+      life.slice(1,3)
+5) includes()
+6) filter -
+      let animals = [
+        {name: 'Tibbers', type: 'cat', isNeutered: true, age: 2},
+        {name: 'Fluffball', type: 'rabbit', isNeutered: false, age: 1},
+        {name: 'Strawhat', type: 'cat', isNeutered: true, age: 5}
+      ];
 
-  /*using functional filter() where a represents an item in the array*/
-  let neuteredAnimals = animals.filter((a) => {
-    return a.isNeutered;
-  });
-find - returns the first matched element
-map
-reduce -
-  let numbers = [100, 20, 10];
-  result = numbers.reduce((x, y) => { return x - y; });
+      /*using functional filter() where a represents an item in the array*/
+      let neuteredAnimals = animals.filter((a) => {
+        return a.isNeutered;
+      });
+7) find - returns the first matched element
+8) map
+9) reduce -
+      let numbers = [100, 20, 10];
+      result = numbers.reduce((x, y) => { return x - y; });
 
-  let totalAge = animals.reduce((acculmulator, animal) => {
-      return acculmulator + animal.age;
-  }, 0);
+      let totalAge = animals.reduce((acculmulator, animal) => {
+          return acculmulator + animal.age;
+      }, 0);
 
-  let oldestPet = animals.reduce((oldest, animal) => {
-      return (oldest.age || 0) > animal.age ? oldest : animal;
-  }, {});
-
-every - return true or false after checking all elements
-some - return true or false after at least 1 true
+      let oldestPet = animals.reduce((oldest, animal) => {
+          return (oldest.age || 0) > animal.age ? oldest : animal;
+      }, {});
+10) every - return true or false after checking all elements
+11) some - return true or false after at least 1 true
