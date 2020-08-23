@@ -1,6 +1,6 @@
 # Data Structures
 
-	1) Arrays (https://github.com/akshaychauhan-ac/data-structures#stacks--queues--) [https://github.com/akshaychauhan-ac/data-structures#stacks--queues--]
+	1) Arrays
 	2) Binary Tree
 	3) Heaps
 	4) Graphs
