@@ -1,88 +1,110 @@
-class LinkedList {
-	constructor (value) {
-		this.length = 0;
-		this.head = null;
-
-		this.addToHead(value);
+class Node {
+	constructor(value) {
+		this.value = value;
+		this.next = null;
 	}
+}
 
-	addToHead (value) {
-		const newNode = { value };
+class LinkedList {
+	constructor() {
+		this.head = null;
+	}
+	add(item) {
+		let currentNode = this.head;
+		let newNode = new Node(item);
+
+		if (!this.head) {
+			this.addToFirst(item);
+			return true;
+		}
+
+		while (currentNode.next !== null) {
+			currentNode = currentNode.next;
+		}
+		currentNode.next = newNode;
+		console.log(this);
+		return;
+	}
+	addToFirst(item) {
+		let newNode = new Node(item);
+
+		if (this.head === null) {
+			this.head = newNode;
+			return true;
+		}
 		newNode.next = this.head;
 		this.head = newNode;
-		this.length++;
-
-		return this;
+		console.log(this);
+		return;
 	}
+	addToPos(index, value) {
+		let counter = 0;
+		let currentNode = this.head, prevNode;
+		let newNode = new Node(value);
 
-	removeFromHead () {
-		if (!this.length) {
-			return "NO NODES";
+		if (!this.head || index === 0) {
+			this.addToFirst(value);
+			return true;
+		}
+
+		while (currentNode.next !== null) {
+			counter++;
+			prevNode = currentNode;
+			currentNode = currentNode.next;
+			
+			if (counter === index) {
+				newNode.next = currentNode; 
+				prevNode.next = newNode;
+				return true;
+			}
+		}
+		console.log("Invalid Pos");
+	}
+	removeFirst() {
+		if (!this.head) {
+			console.log("NO NODES");
+			return;
 		}
 		const value = this.head.value;
 		this.head = this.head.next;
-		this.length--;
 
-		return this.value;
+		console.log(this);
+		return;
 	}
-
-	find (value) {
-		let thisNode = this.head;
-
-		while (thisNode) {
-			if (thisNode.value === value) {
-				return thisNode;
-			}
-			thisNode = thisNode.next;
+	removeLast() {
+		let currentNode = this.head, prevNode;
+		if (!this.head) {
+			console.log("NO NODES");
+			return;
 		}
-		return thisNode;
-	}
-
-	getAt (index) {
-		let counter = 0;
-		let node = this.head;
-
-		while (node) {
-		    if (counter === index) {
-		       return node;
-		    }
-		    counter++;
-		    node = node.next;
-		}
-		return null;
-	}
-
-	insert (index, value) {
-		let counter = 0;
-
-		if (!this.head || index === 0) {
-			this.addToHead(value);
+		if (!this.head.next) {
+			this.removeFirst();
 			return;
 		}
 
-		const previousNode = this.getAt(index - 1);
-		const newNode = { value };
-		newNode.next = previousNode.next;
-		previousNode.next = newNode;
-		this.length ++;	
-
-		return this;
+		while (currentNode.next !== null) {
+			prevNode = currentNode;
+			currentNode = currentNode.next;
+		}
+		prevNode.next = null;
+		return;
 	}
-
-	remove (value) {
-		if (!this.length) {
-			return "NO NODES";
+	removeValue(value) {
+		if (!this.head) {
+			console.log("NO NODES");
+			return;
 		}
 
 		if (this.head.value === value) {
-			return this.removeFromHead();
+			this.removeFirst();
+			return;
 		}
 
 		let previousNode = this.head;
 		let thisNode = previousNode.next;
 
 		while (thisNode) {
-			if(thisNode.value === value) {
+			if(thisNode.value === value) { 
                 break;
             }
 
@@ -91,11 +113,11 @@ class LinkedList {
 		}
 
 		if (thisNode === null) {
-			return "NO NODES";
+			return "NO NODES MATCHED";
 		}
 
 		previousNode.next = thisNode.next;
-        this.length--;
-        return this;
+		console.log(this);
+        return;
 	}
 }
