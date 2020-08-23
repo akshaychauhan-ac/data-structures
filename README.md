@@ -101,4 +101,6 @@
     
 # Linked Lists -
 	
+	LL = new LinkedList()
+	LL.add(1)
 
