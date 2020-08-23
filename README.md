@@ -5,6 +5,7 @@
 	3) Heaps
 	4) Graphs
 	5) Linked Lists
+	6) Stacks & Queues
 	
 # Arrays -
 	1) push
@@ -100,7 +101,18 @@
     const visit = console.log;
     
 # Linked Lists -
-	
-	LL = new LinkedList()
-	LL.add(1)
+	1) Singly -
+		LL = new LinkedList()
+		LL.add(1)
 
+# Stacks & Queues -
+
+	Stacks -
+		Arrays - push(), pop()
+		Singly Linked List - Add First, Remove First
+		Example - Undo operations, postfix calculator
+
+	Queue -
+		Arrays - push(), shift() -> (O(n) so use doubly linked list)
+		Doubly Linked List - Add Last, Remove First
+		Example - Priority Queues
