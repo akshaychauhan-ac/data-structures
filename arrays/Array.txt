@@ -8,7 +8,7 @@
 6) splice - Array.splice( index, remove_count, item_list )
       arrr = [1,2,3]
       remove - arr.splice(1,1) - [1,3]
-      add - Pokemon.splice(2,0,"Evolve")
+      add - arr.splice(1,1,6) - [1,6,3]
 7) filter -
       let animals = [
         {name: 'Tibbers', type: 'cat', isNeutered: true, age: 2},
