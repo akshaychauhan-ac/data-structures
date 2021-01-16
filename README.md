@@ -104,6 +104,7 @@
 	1) Singly -
 		LL = new LinkedList()
 		LL.add(1)
+
 	2) Doubly without tail -
 		let dll = new DoublyLinkedList();
 		dll.addToLast(1);
