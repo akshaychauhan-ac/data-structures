@@ -8,6 +8,7 @@ class Node {
 class SinglyLinkedList {
 	constructor() {
 		this.head = null;
+		this.count = 0;
 	}
 
 	addToFirst(value) {
@@ -15,10 +16,12 @@ class SinglyLinkedList {
 
 		if (this.head === null) {
 			this.head = newNode;
-			return true;
+			this.count++;
+			return;
 		}
 		newNode.next = this.head;
 		this.head = newNode;
+		this.count++;
 		console.log(this);
 	}
 
@@ -28,13 +31,14 @@ class SinglyLinkedList {
 
 		if (!this.head) {
 			this.addToFirst(value);
-			return true;
+			return;
 		}
 
 		while (currentNode.next !== null) {
 			currentNode = currentNode.next;
 		}
 		currentNode.next = newNode;
+		this.count++;
 		console.log(this);
 	}
 
@@ -45,7 +49,7 @@ class SinglyLinkedList {
 
 		if (!this.head || index === 0) {
 			this.addToFirst(value);
-			return true;
+			return;
 		}
 
 		while (currentNode.next !== null) {
@@ -56,7 +60,8 @@ class SinglyLinkedList {
 			if (counter === index) {
 				newNode.next = currentNode; 
 				prevNode.next = newNode;
-				return true;
+				this.count++;
+				console.log(this);
 			}
 		}
 		console.log("Invalid Pos");
@@ -69,7 +74,7 @@ class SinglyLinkedList {
 		}
 		const value = this.head.value;
 		this.head = this.head.next;
-
+		this.count--;
 		console.log(this);
 	}
 
@@ -89,6 +94,8 @@ class SinglyLinkedList {
 			currentNode = currentNode.next;
 		}
 		prevNode.next = null;
+		this.count--;
+		console.log(this);
 	}
 
 	removeValue(value) {
@@ -103,22 +110,23 @@ class SinglyLinkedList {
 		}
 
 		let previousNode = this.head;
-		let thisNode = previousNode.next;
+		let currentNode = previousNode.next;
 
-		while (thisNode) {
-			if(thisNode.value === value) { 
-                break;
-            }
+		while (currentNode) {
+			if (currentNode.value === value) { 
+				break;
+			}
 
-            previousNode = thisNode;
-            thisNode = thisNode.next;
+			previousNode = currentNode;
+			currentNode = currentNode.next;
 		}
 
-		if (thisNode === null) {
+		if (currentNode === null) {
 			return "Value not found.";
 		}
 
-		previousNode.next = thisNode.next;
+		previousNode.next = currentNode.next;
+		this.count--;
 		console.log(this);
 	}
 	
