@@ -10,6 +10,7 @@ class DoublyLinkedList {
 	constructor () {
 		this.head = null;
 		this.tail = null;
+		this.count = 0;
 	}
 
 	addToLast(value) {
@@ -26,6 +27,7 @@ class DoublyLinkedList {
 		currentNode.next = newNode;
 		newNode.prev = currentNode;
 		this.tail = newNode;
+		this.count++;
 		console.log(this);
 		return;
 	}
@@ -36,6 +38,7 @@ class DoublyLinkedList {
 		if (!this.head) {
 			this.head = newNode;
 			this.tail = newNode;
+			this.count++;
 			console.log(this);
 			return;
 		}
@@ -43,6 +46,7 @@ class DoublyLinkedList {
 		newNode.next = this.head;
 		newNode.next.prev = newNode;
 		this.head = newNode;
+		this.count++;
 		console.log(this);
 		return;
 	}
@@ -67,6 +71,7 @@ class DoublyLinkedList {
 				newNode.next = currentNode;
 				prevNode.next = newNode;
 				currentNode.prev = newNode;
+				this.count++;
 				console.log(this);
 				return;
 			}
@@ -86,11 +91,13 @@ class DoublyLinkedList {
 		if (!this.head.next) {
 			this.head = null;
 			this.tail = null;
+			this.count--;
 			console.log(this);
 			return;
 		}
 		this.head = this.head.next;
 		this.head.prev = null;
+		this.count--;
 		console.log(this);
 		return;
 	}
@@ -106,6 +113,7 @@ class DoublyLinkedList {
 		if (!this.head.next) {
 			this.head = null;
 			this.tail = null;
+			this.count--;
 			console.log(this);
 			return;
 		}
@@ -115,6 +123,7 @@ class DoublyLinkedList {
 		}
 		prevNode.next = null;
 		this.tail = prevNode;
+		this.count--;
 		console.log(this);
 		return;
 	}
@@ -147,6 +156,7 @@ class DoublyLinkedList {
 		}
 		prevNode.next = currentNode.next;
 		currentNode.next.prev = prevNode;
+		this.count--;
 		console.log(this);
 		return;
 	}
