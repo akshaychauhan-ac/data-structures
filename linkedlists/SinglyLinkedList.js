@@ -62,9 +62,14 @@ class SinglyLinkedList {
 				prevNode.next = newNode;
 				this.count++;
 				console.log(this);
+				return;
 			}
 		}
-		console.log("Invalid Pos");
+		if (index === (counter + 1)) {
+			this.addToLast(value);
+			return;
+		}
+		console.log("Invalid Position.");
 	}
 
 	removeFirst() {
