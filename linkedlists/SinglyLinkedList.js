@@ -5,28 +5,13 @@ class Node {
 	}
 }
 
-class LinkedList {
+class SinglyLinkedList {
 	constructor() {
 		this.head = null;
 	}
-	add(item) {
-		let currentNode = this.head;
-		let newNode = new Node(item);
 
-		if (!this.head) {
-			this.addToFirst(item);
-			return true;
-		}
-
-		while (currentNode.next !== null) {
-			currentNode = currentNode.next;
-		}
-		currentNode.next = newNode;
-		console.log(this);
-		return;
-	}
-	addToFirst(item) {
-		let newNode = new Node(item);
+	addToFirst(value) {
+		let newNode = new Node(value);
 
 		if (this.head === null) {
 			this.head = newNode;
@@ -35,9 +20,25 @@ class LinkedList {
 		newNode.next = this.head;
 		this.head = newNode;
 		console.log(this);
-		return;
 	}
-	addToPos(index, value) {
+
+	addToLast(value) {
+		let currentNode = this.head;
+		let newNode = new Node(value);
+
+		if (!this.head) {
+			this.addToFirst(value);
+			return true;
+		}
+
+		while (currentNode.next !== null) {
+			currentNode = currentNode.next;
+		}
+		currentNode.next = newNode;
+		console.log(this);
+	}
+
+	addToPosition(index, value) {
 		let counter = 0;
 		let currentNode = this.head, prevNode;
 		let newNode = new Node(value);
@@ -60,21 +61,22 @@ class LinkedList {
 		}
 		console.log("Invalid Pos");
 	}
+
 	removeFirst() {
 		if (!this.head) {
-			console.log("NO NODES");
+			console.log("List is empty.");
 			return;
 		}
 		const value = this.head.value;
 		this.head = this.head.next;
 
 		console.log(this);
-		return;
 	}
+
 	removeLast() {
 		let currentNode = this.head, prevNode;
 		if (!this.head) {
-			console.log("NO NODES");
+			console.log("List is empty.");
 			return;
 		}
 		if (!this.head.next) {
@@ -87,11 +89,11 @@ class LinkedList {
 			currentNode = currentNode.next;
 		}
 		prevNode.next = null;
-		return;
 	}
+
 	removeValue(value) {
 		if (!this.head) {
-			console.log("NO NODES");
+			console.log("List is empty.");
 			return;
 		}
 
@@ -113,11 +115,25 @@ class LinkedList {
 		}
 
 		if (thisNode === null) {
-			return "NO NODES MATCHED";
+			return "Value not found.";
 		}
 
 		previousNode.next = thisNode.next;
 		console.log(this);
-        return;
+	}
+	
+	reverse () {
+		let prevNode = null;
+		let currentNode = this.head;
+		let nextNode = null;
+
+		while (currentNode) {
+			nextNode = currentNode.next;
+			currentNode.next = prevNode;
+			prevNode = currentNode;
+			currentNode = nextNode;
+		}
+		this.head = prevNode;
+		console.log(this);
 	}
 }
