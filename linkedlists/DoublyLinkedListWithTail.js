@@ -29,7 +29,6 @@ class DoublyLinkedList {
 		this.tail = newNode;
 		this.count++;
 		console.log(this);
-		return;
 	}
 
 	addToFirst(value) {
@@ -48,7 +47,6 @@ class DoublyLinkedList {
 		this.head = newNode;
 		this.count++;
 		console.log(this);
-		return;
 	}
 
 	addToPosition(index, value) {
@@ -99,7 +97,6 @@ class DoublyLinkedList {
 		this.head.prev = null;
 		this.count--;
 		console.log(this);
-		return;
 	}
 
 	removeLast() {
@@ -125,7 +122,6 @@ class DoublyLinkedList {
 		this.tail = prevNode;
 		this.count--;
 		console.log(this);
-		return;
 	}
 
 	removeValue(value) {
@@ -158,6 +154,5 @@ class DoublyLinkedList {
 		currentNode.next.prev = prevNode;
 		this.count--;
 		console.log(this);
-		return;
 	}
 }
