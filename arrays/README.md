@@ -1,5 +1,5 @@
 # Arrays -
-  1) push
+	1) push
 	2) unshift
 	3) pop
 	4) shift
