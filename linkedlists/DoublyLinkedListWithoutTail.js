@@ -148,4 +148,20 @@ class DoublyLinkedList {
 		this.count--;
 		console.log(this);
 	}
+	
+	reverse () {
+		let currentNode = this.head;
+		let temp = null;
+
+		while (currentNode) {
+			temp = currentNode.prev;
+			currentNode.prev = currentNode.next;
+			currentNode.next = temp;
+			currentNode = currentNode.prev;
+		}
+		if (temp) {
+			this.head = temp.prev;
+		}
+		console.log(this);
+	}
 }
