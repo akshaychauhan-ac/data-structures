@@ -8,4 +8,4 @@
 	Queue (FIFO) -
 		Arrays - push(), shift() -> (O(n) so use doubly linked list)
 		Doubly Linked List - Add Last, Remove First
-		Example - Priority Queues
+		Example - Priority Queues, Dump logs (Example - max: 100, then deque)
