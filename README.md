@@ -1,8 +1,8 @@
 # Data Structures
 
 	1) Arrays
-	2) Binary Tree
-	3) Heaps
-	4) Graphs
-	5) Linked Lists
-	6) Stacks & Queues
+	2) Linked Lists
+	3) Stacks & Queues
+	4) Binary Tree
+	5) Heaps
+	6) Graphs
