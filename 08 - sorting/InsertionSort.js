@@ -1,4 +1,4 @@
-let insertionSort = (aList) => {
+const insertionSort = (aList) => {
     for (let i = 1; i < aList.length; i++) {
         let iTemp = aList[i];
         let j = i - 1;
