@@ -1,4 +1,4 @@
-let bubbleSort = (aList) => {
+const bubbleSort = (aList) => {
     let bSwapped = false;
 
     do {
