@@ -1,5 +1,6 @@
 let bubbleSort = (aList) => {
     let bSwapped = false;
+
     do {
         bSwapped = false;
         for (let iItem = 0; iItem < aList.length; iItem++) {
@@ -11,5 +12,6 @@ let bubbleSort = (aList) => {
             }
         }
     } while (bSwapped);
+
     return aList;
 };
