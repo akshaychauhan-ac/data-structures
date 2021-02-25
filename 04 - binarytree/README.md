@@ -1,5 +1,13 @@
 # Binary Tree -
 
+    Search
+        Avg - O(log n)
+        Worst - O(n)
+
+    Removal
+        Avg - O(log n)
+        Worst - O(n)
+
     Pre order traversal -
         Example - copying a tree
 
@@ -12,14 +20,6 @@
     Traversal
         Avg & Best & Worst case
             O(n)
-
-    Search
-        Avg - O(log n)
-        Worst - O(n)
-
-    Removal
-        Avg - O(log n)
-        Worst - O(n)
 
 Example -
 
