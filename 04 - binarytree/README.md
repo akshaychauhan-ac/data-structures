@@ -1,5 +1,28 @@
 # Binary Tree -
 
+    Pre order traversal -
+        Example - copying a tree
+
+    In order traversal -
+        Example - print values in sort order
+
+    Post order traversal -
+        Example - deleting each node
+
+    Traversal
+        Avg & Best & Worst case
+            O(n)
+
+    Search
+        Avg - O(log n)
+        Worst - O(n)
+
+    Removal
+        Avg - O(log n)
+        Worst - O(n)
+
+Example -
+
     var BST = new BinarySearchTree(); 
 
     BST.insert(7);
