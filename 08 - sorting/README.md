@@ -25,3 +25,6 @@
 	5. Quick sort -
 	      O(n log n) O(n log n) O(n2)
 	      O(log n) additional memory space
+	      Example : 
+	      	var items = [9, 6, 4, 3, 8, 5, 4, 1, 2, 6];
+		var sortedArray = quickSort(items, 0, items.length - 1);
