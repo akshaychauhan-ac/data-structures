@@ -22,8 +22,8 @@
 	      O(n log n) O(n log n) O(n log n)
 	      O(n) additional memory space
 	      Example : 
-	      var array = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
-	      var sortedArray = mergeSort(array);
+	      	var array = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
+	      	var sortedArray = mergeSort(array);
 
 	5. Quick sort -
 	      O(n log n) O(n log n) O(n2)
@@ -31,3 +31,5 @@
 	      Example : 
 	      	var items = [9, 6, 4, 3, 8, 5, 4, 1, 2, 6];
 		var sortedArray = quickSort(items, 0, items.length - 1);
+
+<img width="487" alt="Screenshot 2021-03-08 at 8 16 24 PM" src="https://user-images.githubusercontent.com/52008891/110336923-5ad8eb00-804b-11eb-9fe8-9aa8baf70cda.png">
