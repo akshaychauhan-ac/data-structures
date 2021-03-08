@@ -15,13 +15,10 @@ const merge = (leftArr, rightArr) => {
           output.push(rightEl);
           rightIndex++;
         }
-
     }
 
-    return [...output, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)];
-    
+    return [...output, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)]
 }
-
 
 const mergeSort = array => {
     debugger;
