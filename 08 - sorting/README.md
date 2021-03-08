@@ -21,6 +21,9 @@
 	      Split -> Compare and merge
 	      O(n log n) O(n log n) O(n log n)
 	      O(n) additional memory space
+	      Example : 
+	      var array = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
+	      var sortedArray = mergeSort(array);
 
 	5. Quick sort -
 	      O(n log n) O(n log n) O(n2)
