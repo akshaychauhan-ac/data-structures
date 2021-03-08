@@ -1,5 +1,4 @@
 const merge = (leftArr, rightArr) => {
-    debugger;
     const output = [];
     let leftIndex = 0;
     let rightIndex = 0;
@@ -21,11 +20,9 @@ const merge = (leftArr, rightArr) => {
 }
 
 const mergeSort = array => {
-    debugger;
     if (array.length < 2) {
         return array;
     }
- 
     const middleIndex = Math.floor(array.length / 2);
     const leftArr = array.slice(0, middleIndex);
     const rightArr = array.slice(middleIndex);
